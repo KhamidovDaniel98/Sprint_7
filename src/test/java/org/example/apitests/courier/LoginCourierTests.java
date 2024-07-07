@@ -3,7 +3,7 @@ package org.example.apitests.courier;
 import io.qameta.allure.*;
 import io.qameta.allure.junit4.*;
 import io.restassured.response.Response;
-import org.example.resthandlers.apihandlers.CourierAPIHandler;
+import example.resthandlers.apihandlers.CourierAPIHandler;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

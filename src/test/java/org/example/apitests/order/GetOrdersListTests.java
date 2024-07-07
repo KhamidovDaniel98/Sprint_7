@@ -4,7 +4,7 @@ import io.qameta.allure.*;
 import io.qameta.allure.junit4.DisplayName;
 import io.qameta.allure.junit4.Tag;
 import io.restassured.response.Response;
-import org.example.resthandlers.apihandlers.OrdersAPIHandler;
+import example.resthandlers.apihandlers.OrdersAPIHandler;
 import org.junit.Test;
 
 @Link(url = "https://qa-scooter.praktikum-services.ru/docs/#api-Orders-CreateOrder", name = "#api-Orders-GetOrdersPageByPage")

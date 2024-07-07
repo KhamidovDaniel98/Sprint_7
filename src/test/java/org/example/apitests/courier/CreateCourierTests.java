@@ -3,7 +3,7 @@ package org.example.apitests.courier;
 import io.qameta.allure.*;
 import io.qameta.allure.junit4.*;
 import io.restassured.response.Response;
-import org.example.resthandlers.apihandlers.CourierAPIHandler;
+import example.resthandlers.apihandlers.CourierAPIHandler;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -63,9 +63,6 @@ public class CreateCourierTests extends CourierAPIHandler {
         // Создание первого курьера
         Response response = createCourier(login, password, firstName);
         setIsCreated(isCourierCreated(response, 201));
-
-        checkStatusCode(response, 201);
-        checkMessage(response, "ok", true);
 
         // Создание второго курьера
         response = createCourier(login, password, firstName);

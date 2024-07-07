@@ -4,7 +4,7 @@ import io.qameta.allure.*;
 import io.qameta.allure.junit4.DisplayName;
 import io.qameta.allure.junit4.Tag;
 import io.restassured.response.Response;
-import org.example.resthandlers.apihandlers.OrdersAPIHandler;
+import example.resthandlers.apihandlers.OrdersAPIHandler;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -73,8 +73,6 @@ public class CreateOrderTests extends OrdersAPIHandler {
         Response response = createOrder(firstName, lastName, address, phone, rentTime, deliveryDate, comment, scooterColor);
         checkStatusCode(response, 201);
         checkResponseParamNotNull(response, "track");
-
-        this.trackId = getTrack(response);
     }
 
 }
