@@ -64,6 +64,7 @@ public class CreateOrderTests extends OrdersAPIHandler {
         deleteOrder(trackId);
     }
 
+
     @Test
     @DisplayName("Создание заказа")
     @Description("Тест проверяет API создания заказа. Ожидаемый результат - заказ создан, возвращается его track-номер")
@@ -71,6 +72,7 @@ public class CreateOrderTests extends OrdersAPIHandler {
         Allure.parameter("Цвет самоката", scooterColor);
 
         Response response = createOrder(firstName, lastName, address, phone, rentTime, deliveryDate, comment, scooterColor);
+        this.trackId = getTrack(response);
         checkStatusCode(response, 201);
         checkResponseParamNotNull(response, "track");
     }
